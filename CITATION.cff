@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this dataset or the article, please cite it as below."
+type: dataset
+title: "What AI coding agents could not open: 19,611 page fetches by six agents on one PC"
+abstract: >-
+  Every web page fetch that Claude Code, Claude Desktop, Codex, OpenCode, MiMo Code and Antigravity made on one
+  Windows PC from 2026-05-09 to 2026-11-16, one row per call and URL, with the tool used and the outcome: content,
+  refusal by the site, challenge page, HTTP 402, not found, redirect, network error or tool-side error. With the two
+  scanners that read the agents' local histories.
+authors:
+  - family-names: Saevets
+    given-names: Igor
+    orcid: "https://orcid.org/0009-0006-8636-1377"
+date-released: 2026-11-16
+version: "1.0.0"
+license: CC-BY-4.0
+url: "https://page2ai.net/research/agent-fetch-outcomes/"
+repository: "https://github.com/igorsaevets/agent-fetch-outcomes"
+keywords:
+  - AI agents
+  - coding agents
+  - web fetch
+  - HTTP status
+  - Claude Code
+  - Codex
+  - open data

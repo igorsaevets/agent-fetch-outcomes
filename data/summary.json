@@ -1,0 +1,948 @@
+{
+ "until": "2026-11-16T07:30:00Z",
+ "rows_in": 22072,
+ "rows_public": 19611,
+ "filter": {
+  "drop:ip_address": {
+   "rows": 7,
+   "hosts": 4
+  },
+  "drop:not_a_url": {
+   "rows": 373,
+   "hosts": 82
+  },
+  "drop:own_site": {
+   "rows": 1793,
+   "hosts": 19
+  },
+  "drop:private_infrastructure": {
+   "rows": 39,
+   "hosts": 4
+  },
+  "drop:private_network": {
+   "rows": 246,
+   "hosts": 2
+  },
+  "drop:robots_file": {
+   "rows": 3,
+   "hosts": 2
+  },
+  "host:author_business": {
+   "rows": 30,
+   "hosts": 6
+  },
+  "host:court_record": {
+   "rows": 162,
+   "hosts": 16
+  },
+  "host:email_like": {
+   "rows": 97,
+   "hosts": 2
+  },
+  "host:ip_in_path": {
+   "rows": 1,
+   "hosts": 1
+  },
+  "host:login_or_capability": {
+   "rows": 885,
+   "hosts": 60
+  },
+  "host:person_or_social_profile": {
+   "rows": 130,
+   "hosts": 16
+  },
+  "host:search_query": {
+   "rows": 2,
+   "hosts": 1
+  },
+  "keep:kept": {
+   "rows": 18304,
+   "hosts": 1929
+  }
+ },
+ "period": {
+  "antigravity": [
+   "2026-08-09",
+   "2026-08-18"
+  ],
+  "claude-code": [
+   "2026-06-10",
+   "2026-11-16"
+  ],
+  "claude-desktop-chat": [
+   "2026-05-09",
+   "2026-11-05"
+  ],
+  "codex": [
+   "2026-06-28",
+   "2026-11-16"
+  ],
+  "mimo-code": [
+   "2026-09-22",
+   "2026-11-16"
+  ],
+  "opencode": [
+   "2026-09-01",
+   "2026-11-16"
+  ]
+ },
+ "by_agent": {
+  "antigravity": {
+   "opened": 318,
+   "not found": 53,
+   "refused by the site": 16,
+   "tool-side error": 6,
+   "login or key needed": 4,
+   "network or server error": 3,
+   "other HTTP error": 3
+  },
+  "claude-code": {
+   "opened": 9610,
+   "not found": 378,
+   "refused by the site": 266,
+   "tool-side error": 217,
+   "redirect not followed": 182,
+   "network or server error": 107,
+   "unclear": 55,
+   "HTTP 402": 19,
+   "refused by the agent's own policy": 19,
+   "login or key needed": 13,
+   "other HTTP error": 11,
+   "refused by a fetch service": 3
+  },
+  "claude-desktop-chat": {
+   "opened": 850,
+   "tool-side error": 39,
+   "network or server error": 8,
+   "refused by the site": 6,
+   "not found": 4,
+   "other HTTP error": 2
+  },
+  "codex": {
+   "not recorded": 2854,
+   "opened": 1374,
+   "tool-side error": 583,
+   "network or server error": 15,
+   "refused by the site": 8,
+   "unclear": 7,
+   "other HTTP error": 6,
+   "login or key needed": 5,
+   "not found": 4
+  },
+  "mimo-code": {
+   "opened": 941,
+   "tool-side error": 24,
+   "not found": 15,
+   "network or server error": 13,
+   "refused by the site": 11,
+   "login or key needed": 1
+  },
+  "opencode": {
+   "opened": 1410,
+   "not found": 79,
+   "tool-side error": 24,
+   "refused by the site": 21,
+   "network or server error": 17,
+   "login or key needed": 4,
+   "unclear": 2,
+   "other HTTP error": 1
+  }
+ },
+ "by_surface": {
+  "claude-code/cli": 6285,
+  "codex/codex-exec": 4365,
+  "claude-code/desktop-code-tab": 4336,
+  "opencode/opencode": 1558,
+  "mimo-code/mimo": 1005,
+  "claude-desktop-chat/desktop-chat-mcp-log": 909,
+  "codex/codex-app": 415,
+  "antigravity/agy-cli": 394,
+  "claude-code/sdk-headless": 259,
+  "codex/codex-cli": 71,
+  "antigravity/agy-ide": 9,
+  "codex/codex-subagent": 5
+ },
+ "hosts_public": 1976,
+ "by_tool": {
+  "claude-code | WebFetch": {
+   "opened": 3342,
+   "not found": 327,
+   "refused by the site": 226,
+   "redirect not followed": 163,
+   "network or server error": 86,
+   "tool-side error": 34,
+   "refused by the agent's own policy": 19,
+   "HTTP 402": 12,
+   "login or key needed": 5,
+   "other HTTP error": 1
+  },
+  "codex | web_search:open_page": {
+   "not recorded": 2392
+  },
+  "claude-code | Bash": {
+   "opened": 2058,
+   "tool-side error": 84,
+   "redirect not followed": 17,
+   "not found": 12,
+   "unclear": 11,
+   "login or key needed": 3,
+   "refused by the site": 1
+  },
+  "claude-code | jina-mcp-server:read_url": {
+   "opened": 1981,
+   "tool-side error": 28,
+   "refused by the site": 26,
+   "unclear": 20,
+   "network or server error": 8,
+   "HTTP 402": 7,
+   "other HTTP error": 4
+  },
+  "opencode | webfetch": {
+   "opened": 1292,
+   "not found": 79,
+   "refused by the site": 21,
+   "network or server error": 15,
+   "tool-side error": 10,
+   "login or key needed": 3,
+   "other HTTP error": 1
+  },
+  "claude-desktop-chat | playwright:browser_navigate": {
+   "opened": 598,
+   "tool-side error": 26,
+   "network or server error": 6,
+   "refused by the site": 1
+  },
+  "claude-code | playwright:browser_navigate": {
+   "opened": 608,
+   "tool-side error": 12,
+   "network or server error": 3,
+   "login or key needed": 2
+  },
+  "mimo-code | jina-mcp-server_read_url": {
+   "opened": 562,
+   "tool-side error": 7,
+   "network or server error": 4,
+   "refused by the site": 2
+  },
+  "codex | exa:web_fetch_exa": {
+   "opened": 521,
+   "tool-side error": 13,
+   "network or server error": 8,
+   "unclear": 4
+  },
+  "claude-code | jina-mcp-server:parallel_read_url": {
+   "opened": 511,
+   "unclear": 8,
+   "tool-side error": 3
+  },
+  "claude-code | PowerShell": {
+   "opened": 422,
+   "tool-side error": 23,
+   "unclear": 16,
+   "not found": 7,
+   "other HTTP error": 4,
+   "refused by the site": 3,
+   "redirect not followed": 2,
+   "network or server error": 1,
+   "login or key needed": 1
+  },
+  "codex | web_search:find_in_page": {
+   "not recorded": 462
+  },
+  "antigravity | read_url_content": {
+   "opened": 310,
+   "not found": 53,
+   "refused by the site": 16,
+   "login or key needed": 4,
+   "network or server error": 3,
+   "other HTTP error": 3,
+   "tool-side error": 2
+  },
+  "codex | jina-mcp-server:read_url": {
+   "opened": 199,
+   "tool-side error": 157,
+   "other HTTP error": 6,
+   "refused by the site": 3,
+   "login or key needed": 2,
+   "network or server error": 2
+  },
+  "codex | jina-mcp-server:parallel_read_url": {
+   "tool-side error": 275,
+   "opened": 89
+  },
+  "mimo-code | webfetch": {
+   "opened": 263,
+   "not found": 13,
+   "tool-side error": 13,
+   "refused by the site": 9,
+   "network or server error": 5,
+   "login or key needed": 1
+  },
+  "codex | codex_apps:tavily_ai.tavily_extract": {
+   "opened": 236,
+   "tool-side error": 37,
+   "refused by the site": 1
+  },
+  "claude-code | firecrawl:firecrawl_scrape": {
+   "opened": 108,
+   "not found": 21,
+   "tool-side error": 21,
+   "refused by a fetch service": 3,
+   "network or server error": 3,
+   "login or key needed": 1
+  },
+  "claude-code | playwright-ext:browser_navigate": {
+   "opened": 149,
+   "network or server error": 2,
+   "tool-side error": 1,
+   "refused by the site": 1
+  },
+  "claude-code | scrapling:fetch": {
+   "opened": 95,
+   "not found": 7,
+   "network or server error": 2,
+   "tool-side error": 2,
+   "refused by the site": 1,
+   "other HTTP error": 1
+  },
+  "opencode | curl(shell)": {
+   "opened": 89,
+   "tool-side error": 11,
+   "network or server error": 2,
+   "unclear": 2,
+   "login or key needed": 1
+  },
+  "claude-code | claude-in-chrome:navigate": {
+   "opened": 86,
+   "tool-side error": 2
+  },
+  "claude-desktop-chat | jina-mcp-server:read_url": {
+   "opened": 72,
+   "refused by the site": 1
+  },
+  "codex | curl(shell)": {
+   "opened": 68,
+   "refused by the site": 2
+  },
+  "claude-code | scrapling:stealthy_fetch": {
+   "opened": 58,
+   "not found": 4,
+   "refused by the site": 3,
+   "tool-side error": 2,
+   "other HTTP error": 1,
+   "login or key needed": 1
+  },
+  "claude-desktop-chat | firecrawl:firecrawl_scrape": {
+   "opened": 52,
+   "not found": 4,
+   "tool-side error": 4,
+   "network or server error": 1
+  },
+  "codex | codex_apps:tavily.tavily_extract": {
+   "opened": 47,
+   "tool-side error": 5
+  },
+  "codex | cloakbrowser:cloak_new_page": {
+   "opened": 32,
+   "tool-side error": 19
+  },
+  "claude-desktop-chat | jina-mcp-server:parallel_read_url": {
+   "opened": 47
+  },
+  "claude-code | crawl4ai:crawl_url": {
+   "opened": 46
+  },
+  "codex | scrapling:fetch": {
+   "opened": 29,
+   "tool-side error": 8,
+   "not found": 4,
+   "login or key needed": 3,
+   "refused by the site": 1
+  },
+  "mimo-code | crawl4ai_crawl_url": {
+   "opened": 39
+  },
+  "codex | codex_apps:exa.web_fetch_exa": {
+   "opened": 31,
+   "tool-side error": 2
+  },
+  "codex | cloakbrowser:cloak_navigate": {
+   "opened": 24,
+   "tool-side error": 3,
+   "network or server error": 1
+  },
+  "codex | firecrawl:firecrawl_scrape": {
+   "tool-side error": 18,
+   "opened": 9
+  },
+  "codex | scrapling:bulk_get": {
+   "opened": 22,
+   "tool-side error": 4
+  },
+  "codex | scrapling:get": {
+   "tool-side error": 20,
+   "opened": 5,
+   "refused by the site": 1
+  },
+  "claude-code | connector:tavily_extract": {
+   "opened": 25
+  },
+  "mimo-code | curl(shell)": {
+   "opened": 21,
+   "tool-side error": 4
+  },
+  "codex | crawl4ai:crawl_url": {
+   "opened": 18,
+   "tool-side error": 6
+  }
+ },
+ "by_site_type": {
+  "other": {
+   "_attempts": 5395,
+   "opened": 4375,
+   "not recorded": 511,
+   "not found": 156,
+   "tool-side error": 149,
+   "network or server error": 68,
+   "refused by the site": 65,
+   "redirect not followed": 37,
+   "unclear": 17,
+   "other HTTP error": 7,
+   "login or key needed": 6,
+   "HTTP 402": 3,
+   "refused by a fetch service": 1
+  },
+  "AI vendor": {
+   "_attempts": 3416,
+   "opened": 2579,
+   "not recorded": 499,
+   "not found": 97,
+   "redirect not followed": 88,
+   "tool-side error": 77,
+   "refused by the site": 40,
+   "network or server error": 16,
+   "login or key needed": 13,
+   "other HTTP error": 3,
+   "unclear": 3,
+   "refused by a fetch service": 1
+  },
+  "government": {
+   "_attempts": 3344,
+   "opened": 1768,
+   "not recorded": 985,
+   "tool-side error": 383,
+   "refused by the site": 96,
+   "not found": 38,
+   "network or server error": 29,
+   "redirect not followed": 17,
+   "unclear": 16,
+   "other HTTP error": 9,
+   "login or key needed": 2,
+   "HTTP 402": 1
+  },
+  "documentation": {
+   "_attempts": 2632,
+   "opened": 2086,
+   "not recorded": 287,
+   "not found": 119,
+   "tool-side error": 62,
+   "refused by the site": 31,
+   "network or server error": 25,
+   "redirect not followed": 17,
+   "other HTTP error": 3,
+   "unclear": 2
+  },
+  "code and packages": {
+   "_attempts": 2514,
+   "opened": 1944,
+   "not recorded": 310,
+   "tool-side error": 133,
+   "not found": 90,
+   "refused by the site": 17,
+   "unclear": 11,
+   "redirect not followed": 5,
+   "network or server error": 4
+  },
+  "store or directory": {
+   "_attempts": 790,
+   "opened": 683,
+   "tool-side error": 30,
+   "refused by the site": 25,
+   "not recorded": 22,
+   "not found": 17,
+   "network or server error": 5,
+   "redirect not followed": 3,
+   "unclear": 3,
+   "login or key needed": 2
+  },
+  "academic": {
+   "_attempts": 554,
+   "opened": 377,
+   "not recorded": 128,
+   "tool-side error": 28,
+   "refused by the site": 9,
+   "HTTP 402": 3,
+   "network or server error": 3,
+   "redirect not followed": 2,
+   "not found": 2,
+   "login or key needed": 2
+  },
+  "social or forum": {
+   "_attempts": 339,
+   "opened": 285,
+   "refused by the agent's own policy": 14,
+   "tool-side error": 10,
+   "not recorded": 10,
+   "HTTP 402": 9,
+   "refused by the site": 5,
+   "network or server error": 2,
+   "not found": 2,
+   "refused by a fetch service": 1,
+   "unclear": 1
+  },
+  "legal": {
+   "_attempts": 307,
+   "opened": 177,
+   "not recorded": 83,
+   "refused by the site": 20,
+   "not found": 8,
+   "tool-side error": 7,
+   "unclear": 4,
+   "HTTP 402": 3,
+   "network or server error": 2,
+   "login or key needed": 2,
+   "refused by the agent's own policy": 1
+  },
+  "search or reader proxy": {
+   "_attempts": 136,
+   "opened": 117,
+   "tool-side error": 8,
+   "network or server error": 4,
+   "not found": 3,
+   "refused by the site": 2,
+   "not recorded": 1,
+   "redirect not followed": 1
+  },
+  "archive": {
+   "_attempts": 120,
+   "opened": 75,
+   "not recorded": 13,
+   "redirect not followed": 12,
+   "tool-side error": 5,
+   "network or server error": 5,
+   "unclear": 4,
+   "refused by the agent's own policy": 3,
+   "refused by the site": 2,
+   "other HTTP error": 1
+  },
+  "news and media": {
+   "_attempts": 64,
+   "opened": 37,
+   "refused by the site": 16,
+   "not recorded": 5,
+   "unclear": 3,
+   "not found": 1,
+   "tool-side error": 1,
+   "refused by the agent's own policy": 1
+  }
+ },
+ "site_type_hosts": {
+  "other": 1312,
+  "documentation": 221,
+  "government": 168,
+  "AI vendor": 92,
+  "academic": 64,
+  "legal": 29,
+  "social or forum": 23,
+  "news and media": 22,
+  "store or directory": 17,
+  "code and packages": 16,
+  "archive": 6,
+  "search or reader proxy": 6
+ },
+ "family": {
+  "built-in fetch": {
+   "opened": 5207,
+   "not recorded": 2854,
+   "not found": 472,
+   "refused by the site": 272,
+   "redirect not followed": 163,
+   "network or server error": 109,
+   "tool-side error": 59,
+   "refused by the agent's own policy": 19,
+   "login or key needed": 13,
+   "HTTP 402": 12,
+   "other HTTP error": 5
+  },
+  "local browser or scraper": {
+   "opened": 2051,
+   "tool-side error": 136,
+   "network or server error": 23,
+   "refused by the site": 17,
+   "not found": 17,
+   "login or key needed": 6,
+   "unclear": 3,
+   "other HTTP error": 2
+  },
+  "other MCP tool": {
+   "opened": 2
+  },
+  "remote reader service": {
+   "opened": 4577,
+   "tool-side error": 572,
+   "refused by the site": 33,
+   "unclear": 32,
+   "network or server error": 28,
+   "not found": 25,
+   "other HTTP error": 12,
+   "HTTP 402": 7,
+   "refused by a fetch service": 3,
+   "login or key needed": 3
+  },
+  "shell HTTP client": {
+   "opened": 2666,
+   "tool-side error": 126,
+   "unclear": 29,
+   "redirect not followed": 19,
+   "not found": 19,
+   "refused by the site": 6,
+   "login or key needed": 5,
+   "other HTTP error": 4,
+   "network or server error": 3
+  }
+ },
+ "provenance_cc": {
+  "other tools | HTTP 402 | seen": 7,
+  "other tools | login or key needed | constructed": 4,
+  "other tools | login or key needed | seen": 4,
+  "other tools | network or server error | constructed": 7,
+  "other tools | network or server error | seen": 14,
+  "other tools | not found | constructed": 45,
+  "other tools | not found | seen": 6,
+  "other tools | opened | constructed": 2901,
+  "other tools | opened | seen": 3367,
+  "other tools | other HTTP error | constructed": 5,
+  "other tools | other HTTP error | seen": 5,
+  "other tools | redirect not followed | constructed": 6,
+  "other tools | redirect not followed | seen": 13,
+  "other tools | refused by a fetch service | constructed": 1,
+  "other tools | refused by a fetch service | seen": 2,
+  "other tools | refused by the site | constructed": 14,
+  "other tools | refused by the site | seen": 26,
+  "other tools | tool-side error | constructed": 99,
+  "other tools | tool-side error | seen": 84,
+  "other tools | unclear | constructed": 38,
+  "other tools | unclear | seen": 17,
+  "WebFetch | HTTP 402 | seen": 12,
+  "WebFetch | login or key needed | constructed": 3,
+  "WebFetch | login or key needed | seen": 2,
+  "WebFetch | network or server error | constructed": 46,
+  "WebFetch | network or server error | seen": 40,
+  "WebFetch | not found | constructed": 268,
+  "WebFetch | not found | seen": 59,
+  "WebFetch | opened | constructed": 1272,
+  "WebFetch | opened | seen": 2070,
+  "WebFetch | other HTTP error | constructed": 1,
+  "WebFetch | redirect not followed | constructed": 97,
+  "WebFetch | redirect not followed | seen": 66,
+  "WebFetch | refused by the agent's own policy | constructed": 17,
+  "WebFetch | refused by the agent's own policy | seen": 2,
+  "WebFetch | refused by the site | constructed": 78,
+  "WebFetch | refused by the site | seen": 148,
+  "WebFetch | tool-side error | constructed": 8,
+  "WebFetch | tool-side error | seen": 26
+ },
+ "chains_tool": {
+  "WebFetch -> jina-mcp-server:read_url": 102,
+  "WebFetch -> jina-mcp-server:parallel_read_url": 14,
+  "WebFetch -> Bash": 13,
+  "WebFetch -> scrapling:fetch": 8,
+  "WebFetch -> playwright:browser_navigate": 5,
+  "jina-mcp-server:read_url -> crawl4ai:crawl_url": 5,
+  "WebFetch -> crawl4ai:crawl_url": 5,
+  "Bash -> PowerShell": 3,
+  "WebFetch -> scrapling:stealthy_fetch": 3,
+  "jina-mcp-server:read_url -> WebFetch": 3,
+  "playwright:browser_navigate -> crawl4ai:crawl_url": 3,
+  "scrapling:bulk_fetch -> connector:tavily_extract": 2,
+  "scrapling:fetch -> jina-mcp-server:read_url": 2,
+  "PowerShell -> Bash": 2,
+  "firecrawl:firecrawl_scrape -> WebFetch": 2,
+  "webfetch -> jina-mcp-server_read_url": 2,
+  "WebFetch -> firecrawl:firecrawl_scrape": 2,
+  "WebFetch -> scrapling:bulk_get": 2,
+  "jina-mcp-server:read_url -> scrapling:fetch": 1,
+  "scrapling:stealthy_fetch -> jina-mcp-server:read_url": 1,
+  "jina-mcp-server:read_url -> connector:tavily_extract": 1,
+  "jina-mcp-server:read_url -> PowerShell": 1,
+  "jina-mcp-server:read_url -> scrapling:stealthy_fetch": 1,
+  "cloakbrowser:cloak_navigate -> cloakbrowser:cloak_new_page": 1,
+  "codex_apps:tavily_ai.tavily_extract -> exa:web_fetch_exa": 1
+ },
+ "chains_family": {
+  "built-in fetch -> remote reader service": 120,
+  "built-in fetch -> local browser or scraper": 24,
+  "built-in fetch -> shell HTTP client": 14,
+  "remote reader service -> local browser or scraper": 10,
+  "local browser or scraper -> remote reader service": 6,
+  "shell HTTP client -> shell HTTP client": 5,
+  "remote reader service -> built-in fetch": 5,
+  "local browser or scraper -> local browser or scraper": 5,
+  "remote reader service -> remote reader service": 4,
+  "remote reader service -> shell HTTP client": 1
+ },
+ "rescued_share": {
+  "refused by the site": [
+   107,
+   328
+  ],
+  "HTTP 402": [
+   10,
+   19
+  ],
+  "refused by the agent's own policy": [
+   11,
+   19
+  ],
+  "refused by a fetch service": [
+   1,
+   3
+  ],
+  "login or key needed": [
+   4,
+   27
+  ],
+  "network or server error": [
+   38,
+   163
+  ],
+  "redirect not followed": [
+   8,
+   182
+  ],
+  "other HTTP error": [
+   3,
+   23
+  ],
+  "not found": [
+   12,
+   533
+  ]
+ },
+ "never_opened_hosts": 64,
+ "models_other": {
+  "gpt-5.4": 2760,
+  "gpt-5.5": 979,
+  "mimo-v2.6-pro": 933,
+  "gpt-6.1-sol": 864,
+  "muse-spark-1.3-contributor-free": 407,
+  "muse-spark-1.3-contributor": 399,
+  "mimo-v2.6-flash-free": 240,
+  "mimo-v2.6-flash": 204,
+  "gpt-5.6-sol": 188,
+  "stepfun-ai/step-5-preview": 85,
+  "muse-spark-1.2-contributor": 76,
+  "hy4": 38
+ },
+ "not_found_by_model": {
+  "gpt-5.4": [
+   0,
+   2760
+  ],
+  "gpt-5.5": [
+   3,
+   979
+  ],
+  "gpt-5.6-sol": [
+   0,
+   188
+  ],
+  "gpt-6.1-sol": [
+   1,
+   864
+  ],
+  "muse-spark-1.3-contributor-free": [
+   11,
+   407
+  ],
+  "mimo-v2.6-pro": [
+   14,
+   933
+  ],
+  "mimo-v2.6-flash-free": [
+   22,
+   240
+  ],
+  "mimo-v2.6-flash": [
+   7,
+   204
+  ],
+  "muse-spark-1.3-contributor": [
+   23,
+   399
+  ],
+  "muse-spark-1.2-contributor": [
+   6,
+   76
+  ],
+  "stepfun-ai/step-5-preview": [
+   3,
+   85
+  ]
+ },
+ "t272": {
+  "rows_in_by_source": {
+   "claude code transcripts and desktop logs": 13885,
+   "other CLIs (frozen file)": 8187
+  },
+  "never_opened": {
+   "hosts": 113,
+   "failed_calls": 150,
+   "by_reason": {
+    "not found, redirect or other HTTP error only": 48,
+    "refused (site, 402 or own policy)": 36,
+    "network or server error": 28,
+    "login or key needed": 1
+   },
+   "table_hosts": 64,
+   "table_calls": 85
+  },
+  "status_429": {
+   "refused by the site": 13,
+   "unclear": 2
+  },
+  "status_999": {
+   "refused by the site": 1
+  },
+  "codex_tool_side": {
+   "total": 583,
+   "cancelled": 461,
+   "approval_policy": 35
+  },
+  "webfetch_redirect_status": {
+   "none": 15,
+   "302": 38,
+   "301": 86,
+   "308": 16,
+   "307": 8
+  },
+  "same_url_later_other_tool": {
+   "refused by the site": [
+    129,
+    107
+   ],
+   "HTTP 402": [
+    10,
+    10
+   ],
+   "refused by the agent's own policy": [
+    11,
+    11
+   ],
+   "refused by a fetch service": [
+    1,
+    1
+   ],
+   "login or key needed": [
+    4,
+    4
+   ],
+   "network or server error": [
+    42,
+    38
+   ],
+   "redirect not followed": [
+    8,
+    8
+   ],
+   "other HTTP error": [
+    4,
+    3
+   ],
+   "not found": [
+    17,
+    12
+   ]
+  },
+  "same_url_later_same_tool": {
+   "refused by the site": 23,
+   "HTTP 402": 2,
+   "refused by the agent's own policy": 0,
+   "refused by a fetch service": 0,
+   "login or key needed": 1,
+   "network or server error": 30,
+   "redirect not followed": 8,
+   "other HTTP error": 5,
+   "not found": 19
+  },
+  "webfetch_then_jina_by_group": {
+   "refused by the site": 62,
+   "network or server error": 15,
+   "not found": 8,
+   "HTTP 402": 5,
+   "refused by the agent's own policy": 10,
+   "login or key needed": 2
+  },
+  "chains_tool_pairs": {
+   "distinct_pairs": 34,
+   "rescued_rows": 194,
+   "listed": 25
+  },
+  "automated_review": {
+   "antigravity": {
+    "false": 280,
+    "true": 123
+   },
+   "codex": {
+    "false": 4170,
+    "true": 686
+   },
+   "mimo-code": {
+    "false": 1005
+   },
+   "opencode": {
+    "false": 1558
+   }
+  },
+  "low_confidence": {
+   "rows": 2665,
+   "opened": 2480
+  },
+  "multi_url_call_by_family": {
+   "remote reader service": 2432,
+   "local browser or scraper": 104,
+   "shell HTTP client": 1519
+  },
+  "reduced_rows_by_family": {
+   "built-in fetch": [
+    199,
+    63
+   ],
+   "local browser or scraper": [
+    761,
+    732
+   ],
+   "remote reader service": [
+    118,
+    99
+   ],
+   "shell HTTP client": [
+    229,
+    219
+   ]
+  },
+  "page2ai_tool_calls": 2,
+  "own_site_rows_removed_by_outcome": {
+   "opened": 1577,
+   "tool-side error": 119,
+   "redirect not followed": 34,
+   "not recorded": 29,
+   "unclear": 12,
+   "login or key needed": 8,
+   "not found": 7,
+   "network or server error": 4,
+   "other HTTP error": 2,
+   "refused by the site": 1
+  }
+ }
+}
